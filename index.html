@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form autocomplete="off">
+        <div id="logo">
+          <img src="payoneerlogo.png">
+        </div>
+        <h2>Payoneer Sign Up</h2><br>
+         <div>
+          <label><span class="required-color">*</span></label>
+          <input
+            type="text"
+            placeholder="First Name"
+            id="first-name-input"
+            required
+          />
+          <span id="first-name-error" class="hide required-color error-message"
+            >Invalid Input</span
+          >
+          <span id="empty-first-name" class="hide required-color error-message"
+            >First Name Cannot Be Empty</span
+          >
+        </div>
+        <div class="input-section">
+          <label> <span class="required-color">*</span></label>
+          <input
+            type="text "
+            placeholder="Last Name"
+            id="last-name-input"
+            required
+          />
+          <span id="last-name-error" class="hide required-color error-message"
+            >Invalid Input</span
+          >
+          <span id="empty-last-name" class="hide required-color error-message">
+            Last Name Cannot Be Empty
+          </span>
+        </div>
+        <div class="input-section">
+          <label><span class="required-color">*</span></label>
+          <input type="email" placeholder="Email" id="email" required />
+          <span id="email-error" class="hide required-color error-message"
+            >Invalid Email</span
+          >
+          <span id="empty-email" class="hide required-color error-message"
+            >Email Cannot Be Empty</span
+          >
+        </div>
+        <div>
+        <div class="input-section">
+          <label><span class="required-color">*</span></label>
+          <input type="email" placeholder="Confirm email" id="confirmemail" required />
+          <span id="confirmemail-error" class="hide required-color error-message"
+            >Invalid Email</span
+          >
+          <span id="empty-email" class="hide required-color error-message"
+            ></span>
+            <br>
+ <label for="password"></label>
+<input type="password" placeholder="Password" id="password" required />
+<p id="password-error" class="error-message"></p>
+<span id="password-error" class="hide required-color error-message"
+            ></span>
+        </div>
+        <label for="birthdateInput">Birthdate:</label>
+    <input type="date" id="birthdateInput" name="birthdateInput" required><br><br>
+
+    <label for="ageRangeInput">Age Range:</label>
+    <input type="number" id="ageRangeInput" name="ageRangeInput" min="18" max="65" required><br><br>
+      
+        <button id="submit-button">Next</button>
+      </form>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
